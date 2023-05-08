@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+*,*::after,*::before
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+img
+{
+    width: 100%;
+}
+
+body
+{
+    min-height: 100vh;
+    font-family: 'Sriracha', cursive;
+}
+
+:root
+{
+    --background-light: #C8E7FF;
+    --nav-light: #0573e1;
+    --main-light: #efefef;
+    --main-dark: #212529;
+    --content-container-light: #efefef;
+    --content-container-dark:#0a100d;
+    --hero-diff: #c05eff;
+    --nav-dark: #4e148c;
+
+}
+
+
+
+// Light/Dark Mode
+[data-theme="light-body"]
+{
+    background-color: var(--background-light);
+}
+[data-theme="dark-body"]
+{
+    background-color: #212529;
+}
+[data-theme="dark-content-container"]
+{
+    background-color: var(--content-container-dark);
+    color: white;
+}
+[data-theme="light-content-container"]
+{
+    background-color: var(--content-container-light);
+    color: black;
+}
+
+[data-theme="dark-main"]
+{
+    background-color: var(--main-dark);
+    color: white;
+}
+[data-theme="light-main"]
+{
+    background-color: var(--main-light);
+    color: black;
+}
+[data-theme="dark-nav"]
+{
+    background-color: var(--nav-dark);
+    color: white;
+}
+[data-theme="light-nav"]
+{
+    background-color: var(--nav-light);
+    color: black;
+}
+[data-theme="light-hero-text"]
+{
+    background-color: #e1e4f3;
+    color: black;
+}
+[data-theme="dark-hero-text"]
+{
+    background-color: #1b1b1e;
+    color: white;
+}
+[data-theme="light-hero-diff"]
+{
+    color: var(--hero-diff);
+}
+[data-theme="dark-hero-diff"]
+{
+    color: #DEAAFF;
+}
+[data-theme="dark-hero-img"]
+{
+    background-color: var(--hero-diff);
+}
+[data-theme="light-hero-img"]
+{
+    background-color: #DEAAFF;
+}
+
+
+
+.container
+{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.header
+{
+    width: 100%;
+
+    .nav
+    {
+        width: 100%;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav button
+    {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+}
+
+.hero
+{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    font-family: 'Fredericka the Great', cursive;
+
+    .hero-text
+    {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    .hero-text h2
+    {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+    .hero-text p
+    {
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: italic;
+    } 
+
+    .hero-image
+    {
+        margin: auto;
+        flex-basis: 50%;
+    }
+}
+
+.footer
+{
+    width: 100%;
+    padding: 1rem;
+}
+
+.content-container
+{
+    width: 100%;
+    min-height: 30vh;
+
+    h1
+    {
+        font-size: 30px;
+        text-decoration: underline;
+        padding: 1rem;
+    }
+}
