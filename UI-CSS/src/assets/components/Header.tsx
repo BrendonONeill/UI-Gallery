@@ -1,7 +1,12 @@
 import Navigation from "./Navigation"
 
+type PropTypes = {
+  theme: boolean,
+  setTheme: React.Dispatch<React.SetStateAction<boolean>>,
+}
 
-function Header({theme, setTheme}) {
+
+function Header({theme, setTheme}: PropTypes) {
   return (
     <div className="header" data-theme={theme? "light-hero-img" : "dark-hero-img"}>
         <Navigation theme={theme} setTheme={setTheme} />

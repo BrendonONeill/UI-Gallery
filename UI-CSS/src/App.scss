@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 *,*::after,*::before
 {
@@ -30,6 +31,8 @@ body
     --content-container-dark:#0a100d;
     --hero-diff: #c05eff;
     --nav-dark: #4e148c;
+    --ui-colour1: rgba(0, 1, 108, 0.918);
+    --ui-colour2: rgba(1, 0, 48, 0.911);
 
 }
 
@@ -47,11 +50,11 @@ body
 [data-theme="dark-content-container"]
 {
     background-color: var(--content-container-dark);
-    color: white;
+    color: #e5e5e5;
 }
 [data-theme="light-content-container"]
 {
-    background-color: var(--content-container-light);
+    background-color: #EDEDED;
     color: black;
 }
 
@@ -183,4 +186,524 @@ body
         text-decoration: underline;
         padding: 1rem;
     }
+}
+
+.cardGrid
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.card-box
+{
+    position: relative;
+    height: 300px;
+    flex-basis: 35%;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-box-big
+{
+    width: 35%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.card-flex
+{
+    display: flex;
+    border: 1px solid black;
+}
+
+.textImage-text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 80%;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+}
+
+.textImage-text p
+{
+    font-size: 4rem;
+}
+.textImage-img
+{
+    flex-basis: 20%;
+    border-radius: 0 8px 8px 0;
+}
+
+.textImage-img img
+{
+    border-radius: 0 10px 10px 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+//Final Fantasy
+
+.card-blueprint
+{
+    flex-basis: 70%;
+    position: relative;
+    cursor: pointer;
+    height: 475px;
+}
+
+.finalf-card
+{
+    font-family: 'Anton', sans-serif;
+    color: white;
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
+    border: 4px solid #adadad;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-flow: column;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.finalf-nav
+{
+    flex-basis: 60%;
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
+    border: 4px solid #adadad;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.finalf-nav ul
+{
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+.finalf-nav ul li
+{
+    padding: 1rem;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.finalf-nav ul li:hover > .cursor-ff
+{
+    display: block;
+}
+
+.finalf-nav ul li:hover
+{
+    color: rgb(212, 212, 212);
+}
+
+
+.cursor-ff
+{
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: -40px;
+    transform: translate(0, -50%);
+}
+
+
+.finalf-gil
+{
+    flex-basis: 40%;
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
+    border: 4px solid #adadad;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+
+// Anime
+
+
+.anime-card
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.1), rgb(162, 148, 211)), url("../bg.jpg");
+    background-size: cover;
+    background-repeat: none;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-anime
+{
+    position: absolute;
+    bottom: -10px;
+    z-index: 1;
+    right: 0;
+}
+
+.pop-up-side
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.card-anime-text
+{
+    color: #FDE174;
+    font-size: 3rem;
+    border: 3px solid #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.anime-animation:hover > .pop-up-anime
+{
+    bottom: -250px;
+    z-index: 1;
+    transition: 0.5s ease-in;
+}
+
+.anime-animation:hover > .pop-up-side
+{
+    left: -170px;
+    z-index: 1;
+    transition: 0.5s ease-in;
+}
+
+//Aqua
+.water-bg
+{
+    font-family: 'Anton', sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    transform: skew(10deg);
+    display: flex;
+    justify-content: space-between;
+}
+
+.water
+{
+    flex-basis: 90%;
+    height: 100%;
+    background-image: url(../water.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11rem;
+}
+
+.water-side
+{
+    flex-basis: 10%;
+    border-radius: 0 10px 10px 0;
+    height: 300px;
+    background-image: url(../water.jpg);
+    background-size: cover;
+}
+
+// Javascript colorful
+
+.colourful
+{
+    background-image: linear-gradient(129deg, rgba(255,236,242,1) 0%, rgba(255,203,250,1) 18%, rgba(167,184,255,1) 37%, rgba(129,250,255,1) 52%, rgba(99,255,93,1) 66%, rgba(255,224,44,1) 83%, rgba(255,0,0,1) 100%);
+    padding: 2px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.javascript
+{
+    font-size: 5rem;
+    font-weight: bold;
+}
+.javascript-one
+{
+    color: #ffecf2;
+}
+.javascript-two
+{
+    color: #ffcbfa;
+}
+.javascript-three
+{
+    color: #a7b8ff;
+}
+.javascript-four
+{
+    color: #81faff;
+}
+.javascript-five
+{
+    color: #63ff5d;
+}
+.javascript-six
+{
+    color: #ffe02c;
+}
+.javascript-seven
+{
+    color: #ff0000;
+}
+
+.test
+{
+    border-radius: 10px;
+    background-color: #000;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Spinning BG
+
+.hide-overflow
+{
+    overflow: hidden;
+}
+.scrolling-bg
+{
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.scrolling
+{
+  background: url("../mountain.jpg");
+  background-size: cover;
+  height: 300px;
+  width: 4000px;
+  background-position: bottom;
+  animation: slide 30s linear infinite;
+}
+
+.scrolling-text
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgba(255, 255, 255, 0.637);
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.blackbar-top
+{
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+.blackbar-bot
+{
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+}
+
+@keyframes slide{
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-2800px, 0, 0);
+    }
+  }
+
+  // Float
+
+  
+.card-over
+{
+  bottom: 4px;
+  width: 420px;
+  position: absolute;
+  right: 4px;
+  height: 292px;
+  background-color: #4d4b4b;
+  border-radius: 120px 10px 10px 10px;
+  overflow: hidden;
+
+}
+
+.card-bg
+{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(154,151,151,0.8) 0%, rgba(77,75,75,1) 51%);
+  animation: spin 20s ease-in-out infinite;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-over #cat
+{
+  height: 50%;
+  width: 50%;
+  animation: float 6s ease-in-out infinite;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  z-index: 5;
+}
+
+.nike
+{
+    position: relative;
+    font-family: 'Anton', sans-serif;
+    background-color: white;
+}
+
+.nike p
+{
+  z-index: 10;
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  font-size: 6rem;
+  color: #efefef;
+  text-shadow: 3px 5px 2px #474747;
+}
+
+.black
+{
+  border-radius: 50%;
+  background-color: black;
+  width: 160px;
+  height: 30px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-60%, 0);
+  animation: flash 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		
+    transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	50% {
+	
+    transform: translate(-50%, -40%) rotate(-45deg);
+	}
+	100% {
+		
+    transform: translate(-50%, -50%) rotate(-45deg);
+	}
+}
+
+@keyframes flash {
+	0% {
+    opacity: 0.1;
+	}
+	50% {
+    opacity: 0.4;
+	}
+	100% {
+    opacity: 0.1;
+	}
+}
+
+@keyframes spin {
+	0% {
+    rotate: 0deg;
+	}
+	50% {
+    rotate: 180deg;
+	}
+	100% {
+    rotate: 360deg;
+}
+}
+
+//ID
+
+.id-card
+{
+    background-color: #0573e1;
+    position: relative;
+    display: flex;
+}
+
+.profile
+{
+    top: 20px;
+    left: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+}
+
+.id-card:hover > .profile
+{
+    position: absolute;
+    border-radius: 20px;
+    border: 5px solid black;
+    top: -20px;
+    left: -20px;
+    width: 300px;
+    height: 300px;  
+}
+
+.id-text
+{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: white;
+    height: 95%;
+    width: 50%;
+    transition: all 0.4s ease-in-out;
+}
+
+.id-card:hover > .id-text
+{
+    position: absolute;
+    border-radius: 20px;
+    border: 5px solid black;
+    bottom: -20px;
+    right: -40px;
+    width: 300px;
+    height: 300px;  
 }
