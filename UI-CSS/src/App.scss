@@ -23,6 +23,7 @@ body
 
 :root
 {
+    //main colours
     --background-light: #C8E7FF;
     --nav-light: #0573e1;
     --main-light: #efefef;
@@ -33,7 +34,32 @@ body
     --nav-dark: #4e148c;
     --ui-colour1: rgba(0, 1, 108, 0.918);
     --ui-colour2: rgba(1, 0, 48, 0.911);
-
+    // anime card colours
+    --black: #000;
+    --white: #fff;
+    --navbar-bg: #162240;
+    --filter-bg: #2D4480;
+    --light-orange: #FF8C73;
+    --blue: #0096C7;
+    --card-text: #000;
+    --grey: #EAEAEA;
+    --bg: #CAF0F8;
+    --card-blue: #e9ecef;
+    --body-colour: #fff;
+    --image-border: #023E8A;
+    //gamer card colours
+    --body-black: #141718;
+    --main-container-black: #1e1f23;
+    --sidebar-black: #141718;
+    --purple-shade: #6846ec;
+    --dark-purple-shade: #4c34aa;
+    --light-shade-grey: #28292d;
+    --lightest-shade-grey: #60626d;
+    --main-font-size: 16px;
+    --font-grey: #fff;
+    --black: #000;
+    --meta-green: #6c3;
+    --meta-green-light: #9ffc70;
 }
 
 
@@ -354,6 +380,7 @@ body
 
 .pop-up-anime
 {
+    transition: 0.5s ease-in;
     position: absolute;
     bottom: -10px;
     z-index: 1;
@@ -362,6 +389,7 @@ body
 
 .pop-up-side
 {
+    transition: 0.5s ease-in;
     position: absolute;
     top: 0;
     left: 0;
@@ -381,14 +409,12 @@ body
 {
     bottom: -250px;
     z-index: 1;
-    transition: 0.5s ease-in;
 }
 
 .anime-animation:hover > .pop-up-side
 {
     left: -170px;
     z-index: 1;
-    transition: 0.5s ease-in;
 }
 
 //Aqua
@@ -658,7 +684,9 @@ body
 
 .id-card
 {
-    background-color: #0573e1;
+    background-color: #22333b;
+    border: 2px solid grey;
+     color: black;
     position: relative;
     display: flex;
 }
@@ -677,6 +705,7 @@ body
 
 .id-card:hover > .profile
 {
+   
     position: absolute;
     border-radius: 20px;
     border: 5px solid black;
@@ -688,14 +717,17 @@ body
 
 .id-text
 {
+    transition: all 0.3s ease-in-out;
     position: absolute;
+    padding: 1rem;
     right: 10px;
     top: 10px;
     background-color: white;
-    height: 95%;
+    height: 92%;
     width: 50%;
-    transition: all 0.4s ease-in-out;
+    overflow: hidden;
 }
+
 
 .id-card:hover > .id-text
 {
@@ -705,5 +737,287 @@ body
     bottom: -20px;
     right: -40px;
     width: 300px;
-    height: 300px;  
+    overflow: visible;
+    height: 500px;  
 }
+
+
+.ff7-card
+{
+    position: relative;
+    background-color: #0573e1;
+}
+
+.ff7-card-cloud
+{
+    transition: all 1s ease-in-out;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    overflow: hidden;
+    background-color: pink;
+    display: flex;
+    justify-content: flex-end;
+    transition: all 1s ease;
+    z-index: 2;
+    border-radius: 0 10px 10px 0;
+}
+
+.ff7-card-cloud img
+{
+    height: 100%;
+    width: 600px;
+}
+
+.ff7-card-seph
+{
+    transition: all 1s ease-in-out;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 10px 0 0 10px;
+}
+
+.ff7-card-seph img
+{
+    height: 100%;
+    width: 600px;
+}
+
+.ff7-card-seph:hover
+{
+    width: 100%;
+    z-index: 4;
+    border-radius: 10px;
+}
+
+
+
+.ff7-card-cloud:hover 
+{
+    width: 100%;
+    z-index: 4;
+    border-radius: 10px;
+}
+
+.ff7-test
+{
+    background: rgb(2,4,3);
+    background: linear-gradient(180deg, rgba(2,4,3,0.15738795518207283) 0%, rgba(2,4,3,0.5271358543417367) 55%, rgba(42,42,42,0.8016456582633054) 100%);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+// gamer card
+.game-card
+{
+  position: relative;
+  color: var(--font-grey);
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  height: 320px;
+  max-width: 420px;
+  flex-basis: 35%;
+  border-radius: 20px 20px 10px 10px;
+  background-color: var(--light-shade-grey);
+  display: grid;
+  grid-template-areas: 
+  "card-image card-image card-image card-image"
+  "game-title game-title game-title game-title"
+  "game-title game-title game-title game-title"
+  "game-title game-title game-title game-title";
+  cursor: pointer;
+}
+
+.game-card:hover
+{
+  border: 2px solid var(--purple-shade);
+  border-bottom: 5px solid var(--purple-shade);
+  position: relative;
+  top: -5px;
+}
+
+.game-card-image
+{
+  grid-area: card-image;
+  overflow-y: hidden;
+  height: 170px;
+  border-radius: 20px 20px 0 0;
+}
+
+.img-in-card
+{
+  min-height: 170px;
+}
+
+.game-card-consoles
+{
+  grid-area: consoles;
+  background-color: var(--purple-shade);
+  position: absolute;
+  max-width: 15%;
+  height: inherit;
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 0 0;
+  padding: 0.5rem;
+}
+
+.game-card-consoles ul
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.2rem;
+}
+
+
+.game-card-title
+{
+ 
+  grid-area: game-title;
+  display: grid;
+  padding: 1rem;
+  align-items: center;
+  grid-template-areas: 
+  "game-name game-name game-name game-name"
+  ". . . ."
+  "release release . .";
+}
+
+.game-card-name
+{
+  color: rgb(240, 240, 240);
+  grid-area: game-name;
+  text-align: center;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--purple-shade);
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-height: 55px;
+}
+.game-card-release
+{
+  grid-area: release ;
+  padding-block: 0.8rem;
+  text-align: left;
+}
+.game-card-score
+{
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  padding: 0.6rem;
+  font-weight: 600;
+  background-color: var(--body-black);
+  border: 3px solid var(--meta-green);
+  border-right: 3px solid var(--meta-green-light);
+  border-top: 3px solid var(--meta-green-light);
+}
+
+.game-card-rating
+{
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  padding: 0.5rem;
+  background-color: var(--dark-purple-shade);
+  border-radius: 10px;
+  z-index: 5;
+  min-width: 60px;
+}
+
+// Anime Card
+
+.card {
+    background-color: var(--card-blue);
+    color: var(--card-text);
+    margin-top: 50px;
+    width: 360px;
+    height: 460px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  .image-section {
+    width: 100%;
+    height: 70%;
+  }
+  
+  .image-section img {
+    border-radius: 20px 20px 0 0;
+    border: 3px solid var(--image-border);
+    border-bottom: none;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+  .name-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+  }
+  
+  .name-section p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+    font-weight: bold;
+  }
+  
+  
+  
+  .score {
+    position: absolute;
+    bottom: -25px;
+    right: -10px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    background-color: var(--light-orange);
+    color: var(--black);
+  }
+  
+  .place {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-weight: bold;
+    border-radius: 15px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey);
+    color: black;
+    border: 3px solid var(--black);
+    border-top: none;
+    border-left: none;
+    box-shadow: 0 5px 20px 5px #29193b;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
