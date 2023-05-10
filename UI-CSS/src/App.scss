@@ -26,9 +26,9 @@ body
     --background-light: #C8E7FF;
     --nav-light: #0573e1;
     --main-light: #efefef;
-    --main-dark: #212529;
+    --main-dark: #0b1821;
     --content-container-light: #efefef;
-    --content-container-dark:#0a100d;
+    --content-container-dark:#1b2a41;
     --hero-diff: #c05eff;
     --nav-dark: #4e148c;
     --ui-colour1: rgba(0, 1, 108, 0.918);
@@ -45,7 +45,7 @@ body
 }
 [data-theme="dark-body"]
 {
-    background-color: #212529;
+    background-color: #0b1821;
 }
 [data-theme="dark-content-container"]
 {
