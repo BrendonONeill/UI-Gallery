@@ -4,7 +4,8 @@ import axios from "axios"
 type cat = {
   data: {
     images: {jpg:{image_url: string}},
-    name: string | null
+    name: string | null,
+    about: string
   }
 }
 
@@ -20,7 +21,8 @@ function Id() {
     { character?
     <div className="card-box id-card">
         <img className="profile" src={character?.data?.images.jpg.image_url} alt="" />
-        <div className="id-text"><p>{character?.data?.name}</p></div>
+        <div className="id-text"><p>Name: {character?.data?.name}</p>
+        <p className="id-about">About: {character?.data?.about.slice(0,480)}</p></div>
     </div> : null
     }
     </>

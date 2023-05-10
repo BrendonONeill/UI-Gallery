@@ -10,6 +10,9 @@ import Aqua from "./assets/cards/Aqua"
 import Colour from "./assets/cards/Colour"
 import SpinningBG from "./assets/cards/SpinningBG"
 import Id from "./assets/cards/Id"
+import FinalFntasyVII from "./assets/cards/FinalFntasyVII"
+import GameCard from "./assets/cards/GameCard"
+import AnimeCard from "./assets/cards/AnimeCard"
 
 function App() {
   const [theme, setTheme] = useState(true)
@@ -25,17 +28,12 @@ function App() {
         <Anime />
         <Colour />
         <Aqua />
-        <SpinningBG />
-        <FinalFantasy />
         <Id />
-      </ContentContainer>
-      <ContentContainer theme={theme} title={"Buttons"}>
-        <div key={1}><p>Test button</p></div>
-        <div key={2}><p>Test button</p></div>
-      </ContentContainer>
-      <ContentContainer theme={theme} title={"Forms"}>
-      <div key={1}><p>Test forms</p></div>
-      <div key={2}><p>Test forms</p></div>
+        <FinalFantasy />
+        <SpinningBG />
+        <FinalFntasyVII />
+        <GameCard />
+        <AnimeCard />
       </ContentContainer>
       </main>
       <Footer theme={theme} />
