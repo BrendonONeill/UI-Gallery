@@ -1,13 +1,13 @@
 # UI-Gallery
 
 ## Tech
-typescript
-vite
-axios
-react
-redux
-vite test
-sass
+. Typescript, 
+. Vite, 
+. Axios, 
+. React, 
+. Redux, 
+. Vite test, 
+. Sass, 
 
 ## Ideas
 float
