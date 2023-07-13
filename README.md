@@ -2,7 +2,7 @@
 
 This is a site of UI components where I let my creative jucies go wide and let me test my css and javascript skills. I have many idea idea I want to test and styles that I come across online that I want to re-create in my style.
 
-<img src="public/cards.JPG" width="500">
+<img src="public/Ccards.JPG" width="500">
 
 ## Tech
 - Typescript, 
