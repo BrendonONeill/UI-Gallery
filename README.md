@@ -14,9 +14,10 @@ This is a site of UI components where I let my creative jucies go wide and let m
 - Sass, 
 
 ## Ideas
-:Hover on a card start playing a video of the subject.
-Zoom Out style of a charcter profile.
-Animated clouds in the sky
+- :Hover on a card start playing a video of the subject.
+- Zoom Out style of a charcter profile.
+- Animated clouds in the sky
+- Cars driving on a road
 
 ## Need Updates
 
